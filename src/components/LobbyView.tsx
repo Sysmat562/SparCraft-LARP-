@@ -93,9 +93,9 @@ export const LobbyView: React.FC<LobbyViewProps> = ({
         <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <div className="flex items-center gap-2 text-xs font-mono text-amber-400">
-              <span>VOICE IMPROV GYM</span>
+              <span>CONVERSATIONAL IMPROV GYM</span>
               <span aria-hidden="true">·</span>
-              <span>100% HANDS-FREE ORAL SPARRING</span>
+              <span>DYNAMIC SPONTANEOUS SPARRING</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold font-display tracking-tight text-white">
               Think on your feet against authentic AI sparring partners.

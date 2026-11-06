@@ -27,9 +27,6 @@ export const CustomScenarioModal: React.FC<CustomScenarioModalProps> = ({
     e.preventDefault();
     if (!title.trim() || !topic.trim() || !characterName.trim()) return;
 
-    const voices: Array<'Puck' | 'Charon' | 'Kore' | 'Fenrir' | 'Zephyr'> = ['Puck', 'Charon', 'Kore', 'Fenrir', 'Zephyr'];
-    const randomVoice = voices[Math.floor(Math.random() * voices.length)];
-
     const categoryObj = SCENARIO_CATEGORIES.find((c) => c.id === category);
 
     const newScenario: SparScenario = {
@@ -43,7 +40,6 @@ export const CustomScenarioModal: React.FC<CustomScenarioModalProps> = ({
         name: characterName.trim(),
         role: characterRole.trim() || 'Conversational Sparring Partner',
         avatarSeed: characterName.toLowerCase().replace(/\s+/g, '-'),
-        voiceName: randomVoice,
         personality: 'Opinionated, sharp, and authentic.',
         challengeStyle: challengeStyle.trim() || 'Probes for concrete specifics, catches vague answers, and tests conviction.',
       },

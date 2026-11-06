@@ -45,7 +45,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Marco Rossi',
       role: 'Third-Generation Chicago Pizzaiolo',
       avatarSeed: 'marco-rossi',
-      voiceName: 'Puck',
       personality: 'Passionate, opinionated, friendly but fiercely protective of authentic Chicago pizza traditions. Hates when people call it "casserole".',
       challengeStyle: 'Probes for dough hydration, cornmeal crust controversy, cheese placement order, and whether you par-bake your crust.'
     },
@@ -74,7 +73,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Julian Sterling',
       role: 'Vintage Horology Curator',
       avatarSeed: 'julian-sterling',
-      voiceName: 'Charon',
       personality: 'Sophisticated, analytical, mildly skeptical, values mechanical ingenuity and patina.',
       challengeStyle: 'Presses on movement calibers, balance spring materials, beat frequencies, and servicing intervals.'
     },
@@ -98,7 +96,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Maya Lin',
       role: 'Head Q-Grader & Roaster',
       avatarSeed: 'maya-lin',
-      voiceName: 'Kore',
       personality: 'Curious, sharp-tongued, deeply scientific about brew variables, respects bold confidence.',
       challengeStyle: 'Asks about bloom agitation, particle distribution, channeling, and anaerobic natural process notes.'
     },
@@ -122,7 +119,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Chloe Bennett',
       role: 'Passionate Brunch Companion',
       avatarSeed: 'chloe-bennett',
-      voiceName: 'Zephyr',
       personality: 'Lively, expressive, incredulous, uses humor and common sense to challenge absurdity.',
       challengeStyle: 'Attacks definitions of broth, cooking processes, savory vs sweet norms, and gastronomic categories.'
     },
@@ -146,7 +142,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Marcus Vance',
       role: 'Cinephile & Screenwriter',
       avatarSeed: 'marcus-vance',
-      voiceName: 'Fenrir',
       personality: 'Dramatic, witty, values the sacred surprise of a third-act reveal.',
       challengeStyle: 'Challenges emotional impact, tension, director intention, and whether you just have low patience.'
     },
@@ -170,7 +165,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Elena Rostova',
       role: 'Senior Product Lead',
       avatarSeed: 'elena-rostova',
-      voiceName: 'Kore',
       personality: 'Direct, engaged, observant, tests whether newcomers can read the room and contribute value.',
       challengeStyle: 'Checks if you validate both sides, bring personal observation, or make generic clichés.'
     },
@@ -194,7 +188,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Devon Cole',
       role: 'Music Producer & Record Collector',
       avatarSeed: 'devon-cole',
-      voiceName: 'Puck',
       personality: 'High energy, passionate, easily excited by bold claims, allergic to boring safe answers.',
       challengeStyle: 'Probes for tracklist depth, cultural impact beyond radio singles, and production innovations.'
     },
@@ -218,7 +211,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Dr. Evelyn Ward',
       role: 'Executive Board Chair',
       avatarSeed: 'evelyn-ward',
-      voiceName: 'Kore',
       personality: 'Composed, insightful, probes the second-order consequences of your answer.',
       challengeStyle: 'Tests for unintended ripple effects, ethical trade-offs, and intellectual courage.'
     },
@@ -242,7 +234,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Professor Arthur Vance',
       role: 'Eccentric Philosopher & Host',
       avatarSeed: 'arthur-vance',
-      voiceName: 'Charon',
       personality: 'Theatrical, sharp, loves counter-intuitive perspectives, despises platitudes.',
       challengeStyle: 'Catches you if you give a cookie-cutter moral answer or dodge the controversy.'
     },
@@ -266,7 +257,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Gary Kowalski',
       role: 'No-Nonsense Logistics Manager',
       avatarSeed: 'gary-kowalski',
-      voiceName: 'Fenrir',
       personality: 'Stressed, practical, bewildered, demands a coherent chronological timeline of events.',
       challengeStyle: 'Pins down specific street names, times, interactions, and catches discrepancies in your story.'
     },
@@ -290,7 +280,6 @@ export const PRESET_SCENARIOS: SparScenario[] = [
       name: 'Samantha Reed',
       role: 'Tier-1 Angel Investor',
       avatarSeed: 'samantha-reed',
-      voiceName: 'Zephyr',
       personality: 'Fast-paced, high expectations, listens for market sizing, unit economics, and competitive moat.',
       challengeStyle: 'Probes for customer acquisition cost, customer churn rates, and how you defend against incumbents.'
     },

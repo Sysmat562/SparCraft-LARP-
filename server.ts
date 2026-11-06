@@ -40,13 +40,13 @@ Character Personality: ${character.personality}
 Challenge Style: ${character.challengeStyle}
 
 CRITICAL RULES FOR REALISTIC CONVERSATION:
-1. You are having an authentic oral back-and-forth dialogue. THIS IS NOT A QUIZ OR WRITTEN ESSAY.
-2. KEEP IT CONCISE: Respond in 1 to 3 spoken sentences (max 45 words). Real humans speak in punchy, reactive turns.
+1. You are having an authentic spontaneous text dialogue / chat banter. THIS IS NOT A FORMAL ESSAY OR STERILE QUIZ.
+2. KEEP IT CONCISE: Respond in 1 to 3 punchy sentences (max 45 words). Real humans chat in reactive volleys.
 3. CHALLENGE VAGUE ANSWERS: If the user gives generic fluff, hand-waving ("it was really good", "you know how it is"), or stalls, call them out with a specific probe or skeptical counter-example.
 4. HAVE STRONG PERSONAL OPINIONS: You have your own taste, experience, and biases. Don't be an impartial neutral bot.
 5. SENSE EMOTIONAL TONE: If the user sounds confident or funny, react with dry wit or genuine interest. If they bluff boldly, probe for concrete proof ("Wait, what hydration percentage did you use?").
 6. NEVER say "As an AI" or break character.
-7. Speak colloquially, with natural phrasing and light verbal texture (e.g. "Wait a minute...", "Come on...", "Look, ...").`;
+7. Chat colloquially, with natural phrasing and light verbal texture (e.g. "Wait a minute...", "Come on...", "Look, ...").`;
 
     // Format conversation history for Gemini chat
     const contents: any[] = [];
@@ -166,9 +166,9 @@ SCORING INSTRUCTIONS:
 Score the user on five 0-100 dimensions:
 1. relevance (0-100): Did the user stay engaged with the core premise and directly address what the opponent threw at them?
 2. specificity (0-100): Concrete names, numbers, sensory details, and crisp vocabulary vs vague filler ("stuff", "really cool", "etc").
-3. conversationalFlow (0-100): Natural spoken rhythm, quick comeback timing, conversational ping-pong vs monologue or awkward stops.
+3. conversationalFlow (0-100): Natural reactive pacing, quick comeback timing, conversational ping-pong vs monologue or awkward pauses.
 4. adaptability (0-100): How gracefully they recovered from curveballs, skepticism, or hostile pushback.
-5. credibility (0-100): Vocal confidence, swagger, unflappable delivery, and conviction (e.g. even if totally making up facts about pizza dough, did they sell it with 90% believable swagger?).
+5. credibility (0-100): Rhetorical confidence, swagger, unflappable composure, and conviction (e.g. even if totally making up facts about pizza dough, did they sell it with 90% believable swagger?).
 6. factualAccuracy (0-100): The actual objective factual truth of their claims (this allows separating pure bluffing confidence from real domain knowledge).
 
 Provide:
@@ -258,7 +258,7 @@ Provide:
         credibility: 78,
         factualAccuracy: 60,
       },
-      deliveryVsAccuracyAnalysis: "Your vocal delivery showed confidence, maintaining conversational composure even when domain details were generalized.",
+      deliveryVsAccuracyAnalysis: "Your rhetorical delivery showed confidence, maintaining conversational composure even when domain details were generalized.",
       moments: [
         {
           userQuote: "The transcript shows you held your ground under questioning.",
@@ -284,49 +284,7 @@ Provide:
   }
 });
 
-// 3. Audio Text-to-Speech API
-app.post('/api/spar/tts', async (req: Request, res: Response) => {
-  try {
-    const { text, voiceName } = req.body;
-    if (!text) {
-      return res.status(400).json({ error: 'Missing text parameter' });
-    }
-
-    const validVoice = ['Puck', 'Charon', 'Kore', 'Fenrir', 'Zephyr'].includes(voiceName)
-      ? voiceName
-      : 'Kore';
-
-    const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash-lite-tts',
-      contents: [
-        {
-          role: 'user',
-          parts: [{ text: text }],
-        },
-      ],
-      config: {
-        responseModalities: ['AUDIO'],
-        speechConfig: {
-          voiceConfig: {
-            prebuiltVoiceConfig: { voiceName: validVoice },
-          },
-        },
-      },
-    });
-
-    const base64Audio = response.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
-    if (base64Audio) {
-      res.json({ audioBase64: base64Audio, mimeType: 'audio/wav' });
-    } else {
-      res.json({ audioBase64: null, mimeType: null });
-    }
-  } catch (error: any) {
-    console.warn('TTS generation fallback to client synthesis:', error?.message);
-    res.json({ audioBase64: null, mimeType: null, fallbackClientSynthesis: true });
-  }
-});
-
-// 4. Interactive "Retry Moment" drill endpoint
+// 3. Interactive "Retry Moment" drill endpoint
 app.post('/api/spar/retry-moment', async (req: Request, res: Response) => {
   try {
     const { scenario, challengePrompt, userNewResponse } = req.body;

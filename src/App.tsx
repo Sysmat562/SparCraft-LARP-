@@ -179,10 +179,10 @@ export default function App() {
           <div className="flex items-center gap-2">
             <span className="font-bold text-slate-400">SparCraft</span>
             <span aria-hidden="true">·</span>
-            <span>Spontaneous Thinking-on-Your-Feet Voice Gym</span>
+            <span>Spontaneous Thinking-on-Your-Feet Improv Gym</span>
           </div>
           <div className="flex items-center gap-4 text-slate-500">
-            <span>Natural Hands-Free Voice</span>
+            <span>Fast Conversational Volleys</span>
             <span>·</span>
             <span>Elo Progression Engine</span>
           </div>

@@ -1,9 +1,7 @@
 {
   "name": "SparCraft: Hands-Free Voice Improv & Conversational Training",
   "description": "Practice thinking on your feet with an adaptive voice sparring partner. Hone your credibility, specificity, and conversational agility across challenging impromptu scenarios with real-time feedback and Elo tracking.",
-  "requestFramePermissions": [
-    "microphone"
-  ],
+  "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
   ]

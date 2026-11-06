@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mic, Trophy, History, Compass, Plus, Flame } from 'lucide-react';
+import { MessageSquare, Trophy, History, Compass, Plus, Flame } from 'lucide-react';
 import { UserStats } from '../types/spar';
 import { getEloTier } from '../utils/elo';
 
@@ -30,14 +30,14 @@ export const Header: React.FC<HeaderProps> = ({
             className="flex items-center gap-2.5 text-left group focus:outline-none"
           >
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-md shadow-amber-500/10 group-hover:scale-105 transition-transform">
-              <Mic className="w-5 h-5 text-slate-950" />
+              <MessageSquare className="w-5 h-5 text-slate-950 fill-slate-950" />
             </div>
             <div>
               <span className="text-lg font-bold font-display tracking-tight text-white group-hover:text-amber-400 transition-colors whitespace-nowrap">
                 SparCraft
               </span>
               <span className="hidden sm:inline-block ml-2 text-xs font-mono text-slate-400">
-                Voice Improv
+                Improv Gym
               </span>
             </div>
           </button>

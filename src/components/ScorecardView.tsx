@@ -211,7 +211,7 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({
               Dimensional Subscores Breakdown
             </h2>
             <p className="text-xs text-slate-400 mt-0.5">
-              Granular scoring across essential spontaneous speaking competencies
+              Granular scoring across essential spontaneous conversational competencies
             </p>
           </div>
           <button
@@ -340,7 +340,7 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({
 
                     <div className="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/70 space-y-1">
                       <span className="text-[11px] font-mono text-amber-400 block">
-                        Your Spoken Line:
+                        Your Response:
                       </span>
                       <p className="italic text-white font-medium">
                         "{moment.userQuote}"
@@ -356,7 +356,7 @@ export const ScorecardView: React.FC<ScorecardViewProps> = ({
                     {moment.suggestedAlternative && (
                       <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800/80 text-emerald-200/90 italic">
                         <strong className="font-mono text-emerald-400 text-[11px] not-italic block mb-0.5">
-                          Better Spoken Alternative:
+                          Sharper Comeback Alternative:
                         </strong>
                         "{moment.suggestedAlternative}"
                       </div>

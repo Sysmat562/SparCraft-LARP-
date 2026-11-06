@@ -177,7 +177,7 @@ export const ProgressView: React.FC<ProgressViewProps> = ({
             <Trophy className="w-8 h-8 text-slate-600" />
             <p className="text-sm font-medium text-slate-300">No Sparring Rounds Recorded Yet</p>
             <p className="text-xs text-slate-500 max-w-sm">
-              Complete your first hands-free voice round in the Arena to establish your baseline debut score and start tracking growth!
+              Complete your first sparring round in the Arena to establish your baseline debut score and start tracking growth!
             </p>
           </div>
         ) : (

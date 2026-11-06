@@ -11,7 +11,6 @@ export interface SparCharacter {
   name: string;
   role: string;
   avatarSeed: string;
-  voiceName: 'Puck' | 'Charon' | 'Kore' | 'Fenrir' | 'Zephyr';
   personality: string;
   challengeStyle: string;
 }
@@ -37,7 +36,6 @@ export interface ConversationTurn {
   speakerName: string;
   text: string;
   timestamp: number;
-  audioUrl?: string;
   isRetry?: boolean;
 }
 
@@ -57,7 +55,7 @@ export interface EvaluationScores {
   specificity: number;      // 0-100
   conversationalFlow: number;// 0-100
   adaptability: number;     // 0-100
-  credibility: number;      // 0-100 (convincing delivery, swagger, unhesitating conviction)
+  credibility: number;      // 0-100 (convincing delivery, swagger, unflappable composure)
   factualAccuracy: number;  // 0-100 (actual real-world factual correctness)
 }
 
